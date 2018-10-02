@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":[],"names":[],"mappings":"","file":"view_articles.css"}
+{"version":3,"sourceRoot":"","sources":["../../sass/_navbar.sass","../../sass/view_articles.sass"],"names":[],"mappings":"AAAA;EACI;;;AAEJ;EACI;;;ACFJ;EACI;EACA;EACA;EACA;EACA;EACA","file":"view_articles.css"}

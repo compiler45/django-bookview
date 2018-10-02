@@ -1,3 +1,18 @@
+.navbar {
+  background-color: #0099bb;
+}
 
+.navbar__brand_text {
+  color: black;
+}
+
+.show-articles {
+  position: relative;
+  left: 40px;
+  border: 2px solid #5af;
+  border-radius: 4px;
+  width: 80%;
+  margin: 20px auto;
+}
 
 /*# sourceMappingURL=view_articles.css.map */

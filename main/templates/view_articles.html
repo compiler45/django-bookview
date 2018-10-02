@@ -2,9 +2,26 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    {% load bootstrap4 %}
+
+    <!-- what should this title be? -->
     <title>View All Articles - page 1</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/view_articles.min.css' %}">
+
+    {% bootstrap_css %}
+    {% bootstrap_javascript jquery='slim' %}
 </head>
 <body>
-    <h3 class="main-page-heading">Latest Articles</h3>
+    <nav class="navbar navbar-expand-md navbar-dark">
+        <a class="navbar-brand h1 ml-2 navbar__home-link" href="{% url 'view_articles' %}">
+            <strong class="navbar__home-link-text">Bookview</strong>
+        </a>
+    </nav>
+    <section class="container show-articles">
+        <h3 class="show-articles__title">Latest Articles</h3>
+    </section>
+    <!-- do not commit -->
+    <script src="http://localhost:35729/livereload.js"></script>
 </body>
 </html>

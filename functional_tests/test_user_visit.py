@@ -29,7 +29,17 @@ class UserVisitiTest(LiveServerTestCase):
 
         # And she ends up on the main view, where she can see the latest articles
         self.assertEqual(self.browser.current_url, self.live_server_url + '/articles')
-        # And some text telling her that she is looking at the latest articles
-        latest_articles = self.browser.find_element_by_css_selector("h3.main-page-heading")
-        self.assertEqual(latest_articles.text, "Latest Articles")
+        # And some large text in the left corner that is the website's branding
+        bookview_brand_text = self.browser.find_element_by_css_selector('.navbar__home-link-text')
+        self.assertEqual(bookview_brand_text.value_of_css_property("font-size"), "20px")
+        self.assertEqual(bookview_brand_text.text, "Bookview")
+
+    def test_clicking_navbar_home_link_takes_user_to_view_all_articles_page(self):
+        # Maetel clicks the big bold navbar link
+        self.browser.get(self.live_server_url + '/articles')
+        bookview_brand_link = self.browser.find_element_by_css_selector('.navbar__home-link')
+        bookview_brand_link.click()
+
+        self.assertEqual(self.browser.current_url, self.live_server_url + '/articles')
+
 
