@@ -1,0 +1,22 @@
+.intro {
+  position: relative;
+  top: 200px;
+  left: 90px;
+}
+
+.intro__greeting {
+  font-size: 40px;
+  color: white;
+}
+
+.intro__text {
+  color: white;
+}
+
+.book-background {
+  background-image: url("/static/img/splash_img.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/*# sourceMappingURL=splash.css.map */

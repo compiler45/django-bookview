@@ -18,11 +18,12 @@ class UserVisitiTest(LiveServerTestCase):
         self.browser.get(self.live_server_url)
         # She lands on a splash page, where she sees nice introductory text,
         # and a prominent link directing her to the main site
-        greeting = self.browser.find_element_by_class_name("greeting")
+        greeting = self.browser.find_element_by_class_name("intro__greeting")
         self.assertEqual(greeting.text , "Welcome to Bookview")
 
-        go_to_main_site = self.browser.find_element_by_css_selector("a.go-to-main-site")
-        self.assertEqual(go_to_main_site.text, "Go to Main Site")
+        go_to_main_site = self.browser.find_element_by_css_selector("a.intro__go-to-main-site")
+        # Actual link has a little arrow beside the text...
+        self.assertIn("Go to Main Site", go_to_main_site.text)
         # She clicks it 
         go_to_main_site.click()
 
@@ -31,3 +32,4 @@ class UserVisitiTest(LiveServerTestCase):
         # And some text telling her that she is looking at the latest articles
         latest_articles = self.browser.find_element_by_css_selector("h3.main-page-heading")
         self.assertEqual(latest_articles.text, "Latest Articles")
+

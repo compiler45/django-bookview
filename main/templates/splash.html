@@ -3,11 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <title>Welcome to Bookview</title>
+    {% load bootstrap4 %}
+
+    {% bootstrap_css %}
+    {% bootstrap_javascript jquery='slim' %}
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/splash.min.css' %}">
 </head>
-<body>
-    <h3 class="greeting">Welcome to Bookview</h3>
-    <a href="{% url 'view_articles' %}" class="go-to-main-site">
-        Go to Main Site
-    </a>
+<body class="book-background">
+    <section class="intro">
+        <h3 class="intro__greeting">Welcome to Bookview</h3>
+        <p class="intro__text">
+            Enjoy interesting articles about the best of literature.
+        </p>
+        <a href="{% url 'view_articles' %}" class="intro__go-to-main-site">
+            {% bootstrap_button content="Go to Main Site &rarr;" button_type='link' button_class='btn-info' %}
+        </a>
+    </section>
 </body>
 </html>

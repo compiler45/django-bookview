@@ -1,0 +1,32 @@
+{
+  "name": "bookview",
+  "version": "1.0.0",
+  "description": "Simple Django application allowing users to view articles about awesome books",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/compiler45/django-bookview.git"
+  },
+  "keywords": [
+    "django",
+    "tdd",
+    "literature",
+    "articles",
+    "books"
+  ],
+  "author": "Abraham Olaoye",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/compiler45/django-bookview/issues"
+  },
+  "homepage": "https://github.com/compiler45/django-bookview#readme",
+  "devDependencies": {
+    "grunt": "^1.0.3",
+    "grunt-contrib-cssmin": "^3.0.0",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-watch": "^1.1.0"
+  }
+}
