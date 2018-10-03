@@ -1,3 +1,4 @@
+from django.urls import reverse
 from django.test import TestCase
 
 
@@ -22,3 +23,12 @@ class ViewArticlesUnitTest(TestCase):
     def test_view_articles_page_gives_correct_template(self):
         response = self.client.get('/articles')
         self.assertTemplateUsed(response, 'view_articles.html')
+
+
+class AdminViewUnitTest(TestCase):
+
+    def test_can_reach_admin_login_page(self):
+        response = self.client.get(reverse('admin:login'))
+        self.assertEqual(response.status_code, 200)
+
+
